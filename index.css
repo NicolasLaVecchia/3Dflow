@@ -1,0 +1,1695 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 405vh;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-areas: "header"
+    "main"
+    "footer";
+}
+
+/*INICIO MEDIA 360px*/
+@media only screen and (min-width:360px) and (max-width:480px){
+    body{
+        width: 100%;
+        height: 430vh;
+        background-color: whitesmoke;
+        display: grid;
+        grid-template-areas: "header"
+        "main"
+        "footer";
+    }
+
+    /*INICIO HEADER*/
+    .header{
+        grid-area: header;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to bottom, whitesmoke, rgba(245, 245, 245, 0.6), rgba(245, 245, 245, 0.4), whitesmoke),
+        url("./Images/3dprinting1.png");
+        background-size: cover;
+        background-position: center;
+        display: grid;
+        grid-template-areas: "banner . ."
+        ". nav ."
+        ". nav ."
+        ". nav ."
+        ". nav ."
+        ". nav ."
+        "busqueda busqueda busqueda";
+        grid-template-columns: 0.5fr 2fr 0.5fr;
+        grid-template-rows: 0.2fr 2fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    /*inicio navegador total*/
+    .total{
+        grid-area: nav;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-areas: "nav2"
+        "nav1"
+        "nav1"
+        "nav3"
+        "nav3";
+    }
+
+    /*inicio navegador2*/
+    .nav2{
+        grid-area: nav2;
+        width: 100%;
+        height: 100%;
+    }
+    .nav2 #home{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .nav2 #home img{
+        width: 100%;
+        height: 100%;
+        transition: 300ms;
+    }
+    .nav2 #home img:hover{
+            transform: scale(0.8);
+    }
+    /*fin navegador2*/
+    
+    /*inicio navegador1*/
+    .nav1{
+        grid-area: nav1;  
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav1 ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav1 ul li{
+        padding: 0.5rem;
+        text-align: center;
+        list-style: none;
+        padding: 1rem;
+    }
+    .nav1 ul li a{
+        color: white;
+        text-decoration: none;
+        font-family: 'Outfit', sans-serif;
+        font-size: 3vmax;
+        font-weight: bold;
+        background-color: rgb(0, 0, 0, 0.2);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        transition: 500ms;
+    }
+    .nav1 ul li a:hover{
+        color: rgb(255, 178, 164);
+        background-color: black;
+    }
+    .nav1 ul li a i{
+        font-size: 3vmax;
+        padding: 1vmax;
+        transition: 600ms;
+    }
+    .nav1 ul li a i:hover{
+        transform: rotate(360deg);
+    } 
+    /*fin navegador1*/
+    
+    /*inicio navegador3*/
+    .nav3{
+        grid-area: nav3;
+        width: 100%;
+        height: 100%;
+    }
+    .nav3 ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .nav3 ul li{
+        padding: 0.5rem;
+        text-align: center;
+        list-style: none;
+        padding: 1rem;
+    }
+    .nav3 ul li a{
+        color: white;
+        text-decoration: none;
+        font-family: 'Outfit', sans-serif;
+        font-size: 3vmax;
+        font-weight: bold;
+        background-color: rgb(0, 0, 0, 0.2);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        transition: 500ms;
+    }
+    .nav3 ul li a:hover{
+        color: rgb(255, 178, 164);
+        background-color: black;
+    }
+    .nav3 ul li a i{
+        font-size: 3vmax;
+        padding: 1vmax;
+        transition: 600ms;
+    }
+    .nav3 ul li a i:hover{
+        transform: rotate(360deg);
+    }
+    /*fin navegador3*/
+    /*fin navegador total*/
+    
+    /*inicio redes*/
+    .redes{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        position:fixed;
+        top: 89.5vh;
+        z-index: 3;
+        background-color: rgb(255, 178, 164);
+    }
+    /*whatsapp*/
+    .redes .whatsapp{
+        width: 100%;
+        height: 100%;
+        background-color:#00bb2d;
+        transition: 500ms;
+    }
+    .redes .whatsapp:hover{
+        transform: translateY(0.5rem);
+        background-color: black;
+    }
+    .redes .whatsapp i{
+        font-style: none;
+        color: whitesmoke;
+        line-height: 10.5vh;
+        font-size: 3vmax;
+        transition: 500ms;
+    }
+    .redes .whatsapp i:hover{
+        color:rgb(255, 178, 164);
+    }
+    /*whatsapp*/
+    /*hotmail*/
+    .redes .hotmail{
+        width: 100%;
+        height: 100%;
+        background-color: #db4a39;
+        transition: 500ms;
+    }
+    .redes .hotmail:hover{
+        transform: translateY(0.5rem);
+        background-color: black;
+    }
+    .redes .hotmail i{
+        font-style: none;
+        color: whitesmoke;
+        font-size: 3vmax;
+        line-height: 10.5vh;
+        transition: 500ms;
+    }
+    .redes .hotmail i:hover{
+        color:rgb(255, 178, 164);
+    }
+    /*hotmail*/
+    /*instagram*/
+    .redes .instagram{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        background-color: #3f729b;
+        transition: 500ms;
+    }
+    .redes .instagram:hover{
+        transform: translateY(0.5rem);
+        background-color: black;
+    }
+    .redes .instagram i{
+        font-style: none;
+        color: whitesmoke;
+        font-size: 3vmax;
+        line-height: 10.5vh;
+        transition: 500ms;
+    }
+    .redes .instagram i:hover{
+        color:rgb(255, 178, 164);
+    }
+    /*instagram*/
+    /*cults*/
+    .redes .cults{
+        width: 100%;
+        height: 100%;
+        background-color: #822ef5;
+        transition: 500ms;
+    }
+    .redes .cults:hover{
+        transform: translateY(0.5rem);
+        background-color: black;
+    }
+    .redes .cults i{
+        font-style: none;
+        color: whitesmoke;
+        font-size: 3vmax;
+        line-height: 10.5vh;
+        transition: 500ms;
+    }
+    .redes .cults i:hover{
+        color:rgb(255, 178, 164);
+    }
+    /*cults*/
+    /*fin redes*/
+
+    /*inicio banner*/
+    #leyendas{
+        grid-area: banner;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        font-size: 0;
+    }
+    /*fin banner*/
+    
+    /*inicio busqueda*/
+    .busqueda{
+        grid-area: busqueda;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        text-align: center;
+    }
+    .busqueda form{
+        width: 100%;
+        height: 100%;
+        border-radius: 1vmax;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .busqueda form input{
+        height: 30%;
+        width: 40%;
+        order: 2;
+        margin-top: 0.3rem;
+    }
+    .busqueda form button{
+        height: 50%;
+        width: 30%;
+        margin: 0vmax 0.5vmax;
+        border-radius: 1rem;
+        background: rgb(0, 0, 0, 0.5);
+        color: whitesmoke;
+        font-family: 'M PLUS 1 Code', sans-serif;
+        font-size: 2.8vmax;
+        transition: 300ms;
+        order: 1;
+    }
+    .busqueda form button:hover{
+        background: rgb(255, 178, 164);
+    }
+    .busqueda form button i{
+        font-size: 2.8vmax;
+    }
+    /*fin busqueda*/
+    /*FIN HEADER*/
+
+    /*INICIO MAIN*/
+    .main{
+        grid-area: main;
+        width: 100%;
+        height: 300vh;
+        display: grid;
+        grid-template-areas: ". trabajo ."
+        ". . ."
+        ". servicios ."
+        ". . ."
+        ". nosotros ."
+        ". . .";
+        grid-template-columns: 0.3fr 2fr 0.3fr;
+        grid-template-rows: 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr;
+    }
+
+    /*inicio boton sticky header*/
+    .main #sticky1{
+        width: 10%;
+        height: 8%;
+        text-align: center;
+        position: fixed;
+        right: 0;
+        bottom: 11vh;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    .main #sticky1 i{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0.1);
+        color: whitesmoke;
+        transition: 1s;
+        padding-top: 0.7rem;
+    }
+    .main #sticky1 i:hover{
+        background-color: black;
+        color: rgb(255, 178, 164);
+        border-radius: 1rem;
+    }
+    /*fin boton sticky header*/
+    
+    /*inicio trabajo*/
+    #trabajo0{
+        grid-area: trabajo;
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: "trabajo1"
+        "trabajo2";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    /*inicio caja con texto*/
+    #trabajo0 .aside1{
+        grid-area: trabajo1;
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+    #trabajo0 .aside1 h1{
+        color: black;
+        font-family: 'M PLUS 1 Code', sans-serif;
+        font-size: 9vmax;
+        font-weight: bold;
+        font-style: oblique;
+        padding: 0vh 1vw 2vh 1vw;
+        text-decoration: underline black;
+        transition: 500ms;
+    }
+    #trabajo0 .aside1 h1:hover{
+        text-decoration: underline goldenrod;
+        color: goldenrod;
+        transform: scaleX(1.2);
+    }
+
+    #trabajo0 .aside1 p{
+        font-family: 'Raleway', sans-serif;
+        color: goldenrod;
+        font-size: 2.9vmax;
+        margin: 0vh 0vw 1vh 0vw;
+        font-weight: bold;
+    }
+    #trabajo0 .aside1 p span{
+        font-family: 'Raleway', sans-serif;
+        color: black;
+        font-weight: bold;
+        transition: 500ms;
+    }
+    #trabajo0 .aside1 p span:hover{
+        color:steelblue
+    }
+    /*fin caja con texto*/
+
+    /*inicio caja con imagen*/
+    #trabajo0 .aside2{
+        grid-area: trabajo2;
+        width: auto;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+    }
+    #trabajo0 .aside2 ul{
+        height: 90%;
+        display: flex;
+        width: 400%;
+        padding: 0;
+    }
+    #trabajo0 .aside2 ul li{
+        height: 100%;
+        list-style: none;
+        width: 100%;
+        border-radius: 5%;
+    }
+    #trabajo0 .aside2 ul li img{
+        height: 100%;
+        width: 100%;
+        border-radius: 5%;
+        animation: slidetrabajo 16s infinite alternate ease-in-out;
+    }
+
+    #trabajo0 .aside2 .vertrabajos{
+        display: flex;
+        justify-content: center;
+    }
+    #trabajo0 .aside2 .vertrabajos a{
+        height: 10%;
+        width: 50%;
+        font-family: 'Raleway', sans-serif;
+        text-decoration: none;
+        color: whitesmoke;
+        overflow: hidden;
+        transition: 500ms;
+        font-size: 3vmax;
+        background-color: rgb(255, 178, 164);
+        border-radius: 0.5rem;
+        padding: 0.2rem;
+    }
+    #trabajo0 .aside2 .vertrabajos a:hover{
+        color: rgb(255, 178, 164);
+        font-weight: bold;
+        background-color: black;
+    }
+    /*fin caja con imagen*/
+    /*keyframe imagenes trabajo*/
+    @keyframes slidetrabajo{
+        0% {margin-left: 0%;}
+        20% {margin-left: 0%;}
+
+        25% {margin-left: -150.5%;}
+        45% {margin-left: -150.5%;}
+
+        50% {margin-left: -250.5%;}
+        70% {margin-left: -250.5%;}
+
+        75% {margin-left: -350.5%;}
+        95% {margin-left: -350.5%;}
+    }
+    /*keyframe imagenes trabajo*/
+    /*fin trabajo*/
+
+    /*inicio servicio*/
+    #servicio0{
+        grid-area: servicios;
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: "servicio1"
+        "servicio2";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    /*inicio caja con texto*/
+    #servicio0 .aside2{
+        grid-area: servicio1;
+        width: auto;
+        height: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    #servicio0 .aside2 h1{
+        color: black;
+        font-family: 'M PLUS 1 Code', sans-serif;
+        font-size: 6vmax;
+        font-weight: bold;
+        font-style: oblique;
+        padding: 2vh 1vw 2vh 1vw;
+        text-decoration: underline black;
+        transition: 500ms;
+    }
+    #servicio0 .aside2 h1:hover{
+        text-decoration: underline goldenrod;
+        color: goldenrod;
+        transform: scaleX(1.2);
+    }
+
+    #servicio0 .aside2 h2{
+        color: goldenrod;
+        font-family: 'Raleway', sans-serif;
+        font-size: 3vmax;
+        margin: 1.5vh 0vw 1vh 0vw;
+    }
+    #servicio0 .aside2 h3{
+        color: goldenrod;
+        font-family: 'Raleway', sans-serif;
+        font-size: 3vmax;
+        margin: 1.5vh 0vw 1vh 0vw;
+    }
+    #servicio0 .aside2 h4{
+        color: goldenrod;
+        font-family: 'Raleway', sans-serif;
+        font-size: 3vmax;
+        margin: 1.5vh 0vw 1vh 0vw;
+    }
+    #servicio0 .aside2 h5{
+        color: goldenrod;
+        font-family: 'Raleway', sans-serif;
+        font-size: 3vmax;
+        margin: 1.5vh 0vw 1vh 0vw;
+    }
+    #servicio0 .aside2 h6{
+        color: goldenrod;
+        font-family: 'Raleway', sans-serif;
+        font-size: 3vmax;
+        margin: 1.5vh 0vw 1vh 0vw;
+    }
+
+    #servicio0 .aside2 a{
+        font-family: 'Raleway', sans-serif;
+        color: goldenrod;
+        font-size: 4vmax;
+        margin: 2vh 0vw 1vh 0vw;
+        font-weight: bold;
+        transition: 500ms;
+        text-decoration: none;
+    }
+
+    #servicio0 .aside2 a:hover{
+        color:steelblue;
+        text-decoration: underline overline steelblue;
+    }
+    /*fin caja con texto*/
+
+    /*inicio caja con imagen*/
+    #servicio0 .aside1{
+        grid-area: servicio2;
+        width: auto;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+    }
+    #servicio0 .aside1 ul{
+        height: 90%;
+        display: flex;
+        width: 400%;
+        padding: 0;
+    }
+    #servicio0 .aside1 ul li{
+        height: 100%;
+        list-style: none;
+        width: 100%;
+        border-radius: 5%;
+    }
+    #servicio0 .aside1 ul li img{
+        height: 100%;
+        width: 100%;
+        border-radius: 5%;
+        animation: slideservicio 20s infinite alternate ease-out;
+    }
+
+    #servicio0 .aside1 .verservicios{
+        display: flex;
+        justify-content: center;
+    }
+
+    #servicio0 .aside1 .verservicios a{
+        height: 10%;
+        width: 50%;
+        font-family: 'Raleway', sans-serif;
+        text-decoration: none;
+        color: whitesmoke;
+        overflow: hidden;
+        transition: 500ms;
+        font-size: 3vmax;
+        background-color: rgb(255, 178, 164);
+        border-radius: 0.5rem;
+        padding: 0.2rem;
+    }
+    #servicio0 .aside1 .verservicios a:hover{
+        color: rgb(255, 178, 164);
+        font-weight: bold;
+        background-color: black;
+    }
+    /*fin caja con imagen*/
+    /*keyframe imagenes servicio*/
+    @keyframes slideservicio{
+        0% {margin-left: 0%;}
+        20% {margin-left: 0%;}
+
+        25% {margin-left: -150.6%;}
+        45% {margin-left: -150.6%;}
+
+        50% {margin-left: -250.6%;}
+        70% {margin-left: -250.6%;}
+
+        75% {margin-left: -350.6%;}
+        95% {margin-left: -350.6%;}
+    }
+    /*keyframe imagenes servicio*/
+    /*fin servicio*/
+
+    /*inicio nosotros*/
+    #nosotros0{
+        grid-area: nosotros;
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: "nosotros1"
+        "nosotros2";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    /*inicio caja con texto*/
+    #nosotros0 .aside1{
+        grid-area: nosotros1;
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+    #nosotros0 .aside1 h1{
+        color: black;
+        font-family: 'M PLUS 1 Code', sans-serif;
+        font-size: 5vmax;
+        font-weight: bold;
+        font-style: oblique;
+        padding: 2vh 0vw 2vh 0vw;
+        text-decoration: underline double black 0.3vmax;
+        transition: 500ms;
+    }
+    #nosotros0 .aside1 h1:hover{
+        text-decoration: underline double goldenrod;
+        color: goldenrod;
+        transform: scaleX(1.2);
+    }
+    #nosotros0 .aside1 h1 span{
+        color: black;
+        text-decoration: none;
+        font-size: 5vmax;
+        transition: 500ms;
+    }
+
+    #nosotros0 .aside1 p{
+        font-family: 'Raleway', sans-serif;
+        color: goldenrod;
+        font-size: 2.8vmax;
+        margin: 0vh 0vw 5vh 0vw;
+    }
+    #nosotros0 .aside1 p span{
+        color: black;
+        font-weight: bold;
+    }
+
+    #nosotros0 .aside1 a{
+        font-family: 'Raleway', sans-serif;
+        color: whitesmoke;
+        font-size: 3vmax;
+        transition: 500ms;
+        background-color: rgb(255, 178, 164);
+        padding: 1rem;
+        border-radius: 1rem;
+        text-decoration: none;
+    }
+    #nosotros0 .aside1 a:hover{
+        color: rgb(255, 178, 164);
+        background-color: black;
+        font-weight: bold;
+    }
+    /*fin caja con texto*/
+
+    /*inicio caja con imagen*/
+    #nosotros0 .aside2{
+        grid-area: nosotros2;
+        width: auto;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+    }
+    #nosotros0 .aside2 .carrusel1{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    #nosotros0 .aside2 .carrusel2{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    #nosotros0 .aside2 .carrusel3{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    #nosotros0 .aside2 .img{
+        width: 100%;
+        height: 100%;
+        border-radius: 2rem;
+    }
+    #nosotros0 .aside2 .img img{
+        width: 100%;
+        height: 100%;
+        transition: 700ms;
+        border-radius: 2rem;
+    }
+    #nosotros0 .aside2 .flecha{
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem;
+    }
+    #nosotros0 .aside2 .flecha a{
+        text-decoration: none;
+        font-size: 4vmax;
+        color: rgb(255, 178, 164);
+    }
+    .flecha a #izq{
+        text-shadow: 0.2rem 0.2rem 0.4rem black;
+        transition: 500ms;
+    }
+    .flecha a #izq:hover{
+        transform: scale(1.5);
+    }
+
+    .flecha a #der{
+        text-shadow: -0.2rem 0.2rem 0.4rem black;
+        transition: 500ms;
+    }
+    .flecha a #der:hover{
+        transform: scale(1.5);
+    }
+    /*fin caja con imagen*/
+    /*fin nosotros*/
+    /*FIN MAIN*/
+
+    /*INICIO FOOTER*/
+    .footer{
+        grid-area: footer;
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        margin-top: 5vh;
+        background-color: rgb(0, 0, 0, 0.5);
+        background: linear-gradient(to left, rgb(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+    }
+    .footer .section1{
+        width: 75%;
+        height: 100%;
+        text-align: center;
+        order: 2;
+        justify-content: center;
+    }
+    .footer .section1 p{
+        width: 100%;
+        height: 100%;
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5vmax;
+        font-style: italic;
+        color: whitesmoke;
+        padding: 1.2rem 2rem 0rem 1rem;
+    }
+
+    .footer .section2{
+        width: 25%;
+        height: auto;
+        order: 1;
+        text-align: center;
+        padding-top: 1rem;
+        font-size: 3vmax;
+    }
+    .footer .section2 a{
+        width: 100%;
+        height: auto;
+        color: black;
+    }
+    .footer .section2 a img{
+        width: 100%;
+        height: auto;
+        transition: 500ms;
+    }
+    .footer .section2 a img:hover{
+        transform: scale(0.9);
+    }
+    /*FIN FOOTER*/
+}
+/*FIN MEDIA 360px*/
+
+/*INICIO  MEDIA 1200px*/
+@media only screen and (min-width:1200px){
+    
+    /*INICIO HEADER*/
+    .header{
+        grid-area: header;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to bottom, whitesmoke, rgba(245, 245, 245, 0.3), rgba(245, 245, 245, 0.3), whitesmoke),
+        url("./Images/3dprinting.jpg");
+        background-size: cover;
+        background-position: center;
+        display: grid;
+        grid-template-areas: "nav nav nav"
+        "banner banner banner"
+        "redes redes busqueda";
+    }
+
+    /*inicio navegador total*/
+    .total{
+        grid-area: nav;
+        width: 100%;
+        height: 10.5vh;
+        background: linear-gradient(rgb(255, 178, 164), rgb(255, 178, 164));
+        position: fixed;
+        z-index: 4;
+        box-shadow: rgb(0, 0, 0, 0.5) 0px 20px 5vmax;
+        display: grid;
+        grid-template-areas: "nav1 nav2 nav3";
+    }
+
+    /*inicio navegador1*/
+    .nav1{
+        grid-area: nav1;
+        width: 100%;
+        height: 10.5vh;
+    }
+    .nav1 ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav1 ul li{
+        text-align: center;
+        list-style: none;
+        display: inline-block;
+    }
+    .nav1 ul li a{
+        color: white;
+        text-decoration: none;
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.2vmax;
+        font-weight: bold;
+        line-height: 10.5vh;
+    }
+    .nav1 ul li a:hover{
+        color: black;
+    }
+    .nav1 ul li a i{
+        font-size: 1.5vmax;
+        padding: 1vmax;
+        transition: 600ms;
+    }
+    .nav1 ul li a i:hover{
+        transform: rotate(360deg);
+    } 
+    /*fin navegador1*/
+
+    /*inicio navegador2*/
+    .nav2{
+        grid-area: nav2;
+        width: 100%;
+        height: 10.5vh;
+    }
+    .nav2 #home{
+        display: flex;
+        justify-content: center;
+    }
+    .nav2 #home img{
+        width: 50%;
+        height: 10vh;
+        transition: 300ms;
+    }
+    .nav2 #home img:hover{
+        transform: scale(0.8);
+    }
+    /*fin navegador2*/
+
+    /*inicio navegador3*/
+    .nav3{
+        width: 100%;
+        height: 10.5vh;
+        grid-area: nav3;
+    }
+    .nav3 ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav3 ul li{
+        text-align: center;
+        list-style: none;
+        display: inline-block;
+    }
+    .nav3 ul li a{
+        color: white;
+        text-decoration: none;
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.2vmax;
+        font-weight: bold;
+        line-height: 10.5vh;
+    }
+    .nav3 ul li a:hover{
+        color: black;
+    }
+    .nav3 ul li a i{
+        font-size: 1.5vmax;
+        padding: 1vmax;
+        transition: 600ms;
+    }
+    .nav3 ul li a i:hover{
+        transform: rotate(360deg);
+    }
+    /*fin navegador3*/
+    /*fin navegador total*/
+
+    /*inicio banner*/
+    #leyendas{
+        grid-area: banner;
+        width: 100%;
+        height: 100%;
+        color: white;
+        font-family: 'Outfit', sans-serif;
+        display: inline-block;
+    }
+
+    #leyendas h1{
+        color: whitesmoke;
+        font-size: 5vmax;
+        font-weight: 500;
+        padding: 7vh 0vw 0vh 7vw;
+        text-shadow: 2px 2px 2px black;
+    }
+    #leyendas h1 span{
+        font-size: 5.2vmax;
+        color: goldenrod;
+        font-style: oblique;
+        transition: 300ms;
+    }
+
+    #leyendas h2{
+        background-color: #f5f5f54d;
+        font-family: 'Playfair Display', serif;
+        color: rgb(255, 255, 255);
+        font-size: 3.5vmax;
+        font-weight: lighter;
+        font-style: oblique;
+        margin: 0vh 20vw 0vh 0vw;
+        padding: 0vh 0vw 0vh 20vw;
+        transition: 600ms;
+    }
+    #leyendas h2:hover{
+        color: rgb(231, 200, 122);
+        text-shadow: 0.2rem 0.2rem 0.2rem black;
+    }
+
+    #leyendas h3{
+        font-family: 'M PLUS 1 Code', sans-serif;
+        color: rgb(255, 255, 255);
+        font-size: 4vmax;
+        font-weight: bold;
+        padding: 0vh 6vw 0vh 15vw;
+        text-shadow: 2px 2px 2px black;
+    }
+    #leyendas h3 span{
+        font-size: 4.5vmax;
+        color: rgb(231, 200, 122);
+        font-style: oblique;
+    }
+
+    #leyendas h4{
+        background-color: #f5f5f54d;
+        font-family: 'Raleway', sans-serif;
+        color: rgb(255, 255, 255);
+        font-size: 3.2vmax;
+        margin: 0vh 30vw 0vh 0vw;
+        padding: 0vh 8vw 0vh 20vw;
+        transition: 600ms;
+    }
+    #leyendas h4:hover{
+        color: rgb(255, 206, 197);
+        text-shadow: 0.2rem 0.2rem 0.2rem black;
+    }
+
+    #leyendas h5{
+        font-family: 'Outfit', sans-serif;
+        font-size: 4vmax;
+        margin: 0vh 8vw;
+        padding: 0vh 8vw 0vh 2vw;
+        text-shadow: 2px 2px 2px black;
+    }
+
+    #leyendas h6{
+        background-color: #f5f5f54d;
+        font-family: 'Playfair Display', serif;
+        color: rgb(231, 200, 122);
+        font-style: oblique;
+        font-size: 3vmax;
+        margin: 0vh 28vw 0vh 0vw;
+        padding: 0vh 8vw 0vh 15vw;
+        transition: 600ms;
+    }
+    #leyendas h6:hover{
+        color: black;
+    }
+
+    #leyendas span:hover{
+        font-style: normal;
+    }
+    /*fin banner*/
+
+    /*inicio redes*/
+    .redes{
+        grid-area: redes;
+        width: 20vw;
+        height: 10.5vh;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        position:fixed;
+        top: 89.5vh;
+        z-index: 3;
+        background-color: rgb(255, 178, 164);
+    }
+    /*whatsapp*/
+    .redes .whatsapp{
+        width: 100%;
+        height: 100%;
+        background-color:#00bb2d;
+        transition: 500ms;
+    }
+    .redes .whatsapp:hover{
+        transform: translateY(0.5rem);
+        background-color: black;
+    }
+    .redes .whatsapp i{
+        font-style: none;
+        color: whitesmoke;
+        line-height: 10.5vh;
+        font-size: 3vmax;
+        transition: 500ms;
+    }
+    .redes .whatsapp i:hover{
+        color:rgb(255, 178, 164);
+    }
+    /*whatsapp*/
+    /*hotmail*/
+    .redes .hotmail{
+        width: 100%;
+        height: 100%;
+        background-color: #db4a39;
+        transition: 500ms;
+    }
+    .redes .hotmail:hover{
+        transform: translateY(0.5rem);
+        background-color: black;
+    }
+    .redes .hotmail i{
+        font-style: none;
+        color: whitesmoke;
+        font-size: 3vmax;
+        line-height: 10.5vh;
+        transition: 500ms;
+    }
+    .redes .hotmail i:hover{
+        color:rgb(255, 178, 164);
+    }
+    /*hotmail*/
+    /*instagram*/
+    .redes .instagram{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        background-color: #3f729b;
+        transition: 500ms;
+    }
+    .redes .instagram:hover{
+        transform: translateY(0.5rem);
+        background-color: black;
+    }
+    .redes .instagram i{
+        font-style: none;
+        color: whitesmoke;
+        font-size: 3vmax;
+        line-height: 10.5vh;
+        transition: 500ms;
+    }
+    .redes .instagram i:hover{
+        color:rgb(255, 178, 164);
+    }
+    /*instagram*/
+    /*cults*/
+    .redes .cults{
+        width: 100%;
+        height: 100%;
+        background-color: #822ef5;
+        transition: 500ms;
+    }
+    .redes .cults:hover{
+        transform: translateY(0.5rem);
+        background-color: black;
+    }
+    .redes .cults i{
+        font-style: none;
+        color: whitesmoke;
+        font-size: 3vmax;
+        line-height: 10.5vh;
+        transition: 500ms;
+    }
+    .redes .cults i:hover{
+        color:rgb(255, 178, 164);
+    }
+    /*cults*/
+    /*fin redes*/
+
+    /*inicio busqueda*/
+    .busqueda{
+        grid-area: busqueda;
+        height: 10.5vh;
+        width: 100%;
+        display: flex;
+        text-align: center;
+        position: relative;
+        right: 2rem;
+        box-shadow: 1rem 1rem 3rem rgb(0, 0, 0, 0.5);
+        border-radius: 1vmax;
+    }
+    .busqueda form{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(218, 165, 32, 0.5);
+        background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
+        line-height: 10.5vh;
+        border-radius: 1vmax;
+    }
+    .busqueda form input{
+        height: 50%;
+        width: 40%;
+        margin: 0vmax 2vmax;
+    }
+    .busqueda form button{
+        height: 70%;
+        width: 30%;
+        margin: 0vmax 0.5vmax;
+        border-radius: 1rem;
+        background: rgb(0, 0, 0, 0.5);
+        color: whitesmoke;
+        font-family: 'M PLUS 1 Code', sans-serif;
+        font-size: 1vmax;
+        transition: 300ms;
+    }
+    .busqueda form button:hover{
+        background: rgb(255, 178, 164);
+    }
+    .busqueda form button i{
+        font-size: 1.3vmax;
+    }
+    /*fin busqueda*/
+    /*FIN HEADER*/
+
+    /*INICIO MAIN*/
+    .main{
+        grid-area: main;
+        width: 100%;
+        height: 294.5vh;
+        display: grid;
+        grid-template-areas:"trabajo"
+        "servicios"
+        "nosotros";
+    }
+
+    /*inicio boton sticky header*/
+    .main #sticky1{
+        width: 3.2%;
+        height: 100%;
+        text-align: center;
+        position: sticky;
+        bottom: 0.5rem;
+        margin-left: 96.8%;
+    }
+    .main #sticky1 i{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0.1);
+        padding: 1rem;
+        color: whitesmoke;
+        transition: 1s;
+    }
+    .main #sticky1 i:hover{
+        background-color: black;
+        color: rgb(255, 178, 164);
+        border-radius: 1rem;
+    }
+    /*fin boton sticky header*/
+
+    /*inicio trabajo*/
+    #trabajo0{
+        grid-area: trabajo;
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: ". . . ."
+        ". trabajo1 trabajo2 ."
+        ". . . .";
+        gap: 4rem;
+    }
+    /*inicio caja con texto*/
+    #trabajo0 .aside1{
+        grid-area: trabajo1;
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+
+    #trabajo0 .aside1 h1{
+        color: black;
+        font-family: 'M PLUS 1 Code', sans-serif;
+        font-size: 5vmax;
+        font-weight: bold;
+        font-style: oblique;
+        padding: 12vh 1vw 5vh 1vw;
+        text-decoration: underline black;
+        transition: 500ms;
+    }
+    #trabajo0 .aside1 h1:hover{
+        text-decoration: underline goldenrod;
+        color: goldenrod;
+        transform: scaleX(1.2);
+    }
+
+    #trabajo0 .aside1 p{
+        font-family: 'Raleway', sans-serif;
+        color: goldenrod;
+        font-size: 2vmax;
+        margin: 0vh 5vw 4vh 5vw;
+        font-weight: bold;
+    }
+    #trabajo0 .aside1 p span{
+        font-family: 'Raleway', sans-serif;
+        color: black;
+        font-weight: bold;
+        transition: 500ms;
+    }
+    #trabajo0 .aside1 p span:hover{
+        color:steelblue
+    }
+    /*fin caja con texto*/
+
+    /*inicio caja con imagen*/
+    #trabajo0 .aside2{
+        grid-area: trabajo2;
+        width: auto;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    #trabajo0 .aside2 ul{
+        height: 95%;
+        display: flex;
+        width: 400%;
+        padding: 0;
+    }
+    #trabajo0 .aside2 ul li{
+        height: 100%;
+        list-style: none;
+        width: 100%;
+        border-radius: 5%;
+    }
+    #trabajo0 .aside2 ul li img{
+        height: 100%;
+        width: 100%;
+        border-radius: 5%;
+        animation: slidetrabajo 16s infinite alternate ease-in-out;
+    }
+
+    #trabajo0 .aside2 .vertrabajos{
+        display: flex;
+        justify-content: center;
+    }
+    #trabajo0 .aside2 .vertrabajos a{
+        height: 5%;
+        width: 30%;
+        font-family: 'Raleway', sans-serif;
+        text-decoration: none;
+        color: whitesmoke;
+        overflow: hidden;
+        transition: 500ms;
+        background-color: rgb(255, 178, 164);
+        border-radius: 0.5rem;
+        padding: 0.2rem;
+    }
+    #trabajo0 .aside2 .vertrabajos a:hover{
+        color: rgb(255, 178, 164);
+        font-weight: bold;
+        background-color: black;
+    }
+    /*fin caja con imagen*/
+    /*keyframe imagenes trabajo*/
+    @keyframes slidetrabajo{
+        0% {margin-left: 0%;}
+        20% {margin-left: 0%;}
+
+        25% {margin-left: -150.5%;}
+        45% {margin-left: -150.5%;}
+
+        50% {margin-left: -250.5%;}
+        70% {margin-left: -250.5%;}
+
+        75% {margin-left: -350.5%;}
+        95% {margin-left: -350.5%;}
+    }
+    /*keyframe imagenes trabajo*/
+    /*fin trabajo*/
+
+    /*inicio servicio*/
+    #servicio0{
+        grid-area: servicios;
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: ". . . ."
+        ". servicio1 servicio2 ."
+        ". . . .";
+        gap: 4rem;
+    }
+
+    /*inicio caja con imagen*/
+    #servicio0 .aside1{
+        grid-area: servicio1;
+        width: auto;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+    }
+    #servicio0 .aside1 ul{
+        height: 93%;
+        display: flex;
+        width: 400%;
+        padding: 0;
+    }
+    #servicio0 .aside1 ul li{
+        height: 100%;
+        list-style: none;
+        width: 100%;
+        border-radius: 5%;
+    }
+    #servicio0 .aside1 ul li img{
+        height: 100%;
+        width: 100%;
+        border-radius: 5%;
+        animation: slideservicio 20s infinite alternate ease-out;
+    }
+
+    #servicio0 .aside1 .verservicios{
+        display: flex;
+        justify-content: center;
+    }
+
+    #servicio0 .aside1 .verservicios a{
+        height: 5%;
+        width: 30%;
+        font-family: 'Raleway', sans-serif;
+        text-decoration: none;
+        color: whitesmoke;
+        overflow: hidden;
+        transition: 500ms;
+        background-color: rgb(255, 178, 164);
+        border-radius: 0.5rem;
+        padding: 0.2rem;
+    }
+    #servicio0 .aside1 .verservicios a:hover{
+        color: rgb(255, 178, 164);
+        font-weight: bold;
+        background-color: black;
+    }
+    /*fin caja con imagen*/
+    /*keyframe imagenes servicio*/
+    @keyframes slideservicio{
+        0% {margin-left: 0%;}
+        20% {margin-left: 0%;}
+
+        25% {margin-left: -150.6%;}
+        45% {margin-left: -150.6%;}
+
+        50% {margin-left: -250.6%;}
+        70% {margin-left: -250.6%;}
+
+        75% {margin-left: -350.6%;}
+        95% {margin-left: -350.6%;}
+    }
+    /*keyframe imagenes servicio*/
+
+    /*inicio caja con texto*/
+    #servicio0 .aside2{
+        grid-area: servicio2;
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+
+    #servicio0 .aside2 h1{
+        color: black;
+        font-family: 'M PLUS 1 Code', sans-serif;
+        font-size: 4vmax;
+        font-weight: bold;
+        font-style: oblique;
+        padding: 5vh 1vw 5vh 1vw;
+        text-decoration: underline black;
+        transition: 500ms;
+    }
+    #servicio0 .aside2 h1:hover{
+        text-decoration: underline goldenrod;
+        color: goldenrod;
+        transform: scaleX(1.2);
+    }
+
+    #servicio0 .aside2 h2{
+        color: goldenrod;
+        font-family: 'Raleway', sans-serif;
+        font-size: 2vmax;
+        margin: 0vh 1vw 5vh 1vw;
+    }
+    #servicio0 .aside2 h3{
+        color: goldenrod;
+        font-family: 'Raleway', sans-serif;
+        font-size: 2vmax;
+        margin: 0vh 1vw 5vh 1vw;
+    }
+    #servicio0 .aside2 h4{
+        color: goldenrod;
+        font-family: 'Raleway', sans-serif;
+        font-size: 2vmax;
+        margin: 0vh 1vw 5vh 1vw;
+    }
+    #servicio0 .aside2 h5{
+        color: goldenrod;
+        font-family: 'Raleway', sans-serif;
+        font-size: 2vmax;
+        margin: 0vh 1vw 5vh 1vw;
+    }
+    #servicio0 .aside2 h6{
+        color: goldenrod;
+        font-family: 'Raleway', sans-serif;
+        font-size: 2vmax;
+        margin: 0vh 1vw 5vh 1vw;
+    }
+
+    #servicio0 .aside2 a{
+        font-family: 'Raleway', sans-serif;
+        color: goldenrod;
+        font-size: 3vmax;
+        margin: 1vh 5vw 4vh 5vw;
+        font-weight: bold;
+        transition: 500ms;
+        text-decoration: none;
+    }
+
+    #servicio0 .aside2 a:hover{
+        color:steelblue;
+        text-decoration: underline overline steelblue;
+    }
+    /*fin caja con texto*/
+    /*fin servicio*/
+
+    /*inicio nosotros*/
+    #nosotros0{
+        grid-area: nosotros;
+        width: 100%;
+        height: 89.5vh;
+        display: grid;
+        grid-template-areas: ". . . ."
+        ". nosotros1 nosotros2 ."
+        ". . . .";
+        gap: 4rem;
+    }
+    /*inicio caja con texto*/
+    #nosotros0 .aside1{
+        grid-area: nosotros1;
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+
+    #nosotros0 .aside1 h1{
+        color: black;
+        font-family: 'M PLUS 1 Code', sans-serif;
+        font-size: 3vmax;
+        font-weight: bold;
+        font-style: oblique;
+        padding: 8vh 1vw 5vh 1vw;
+        text-decoration: underline double black 0.3vmax;
+        transition: 500ms;
+    }
+    #nosotros0 .aside1 h1:hover{
+        text-decoration: underline double goldenrod;
+        color: goldenrod;
+        transform: scaleX(1.2);
+    }
+    #nosotros0 .aside1 h1 span{
+        color: black;
+        text-decoration: none;
+        font-size: 3.5vmax;
+        transition: 500ms;
+    }
+
+    #nosotros0 .aside1 p{
+        font-family: 'Raleway', sans-serif;
+        color: goldenrod;
+        font-size: 2vmax;
+        margin: 0vh 5vw 8vh 5vw;
+    }
+    #nosotros0 .aside1 p span{
+        color: black;
+        font-weight: bold;
+    }
+
+    #nosotros0 .aside1 a{
+        font-family: 'Raleway', sans-serif;
+        color: whitesmoke;
+        font-size: 2vmax;
+        transition: 500ms;
+        background-color: rgb(255, 178, 164);
+        padding: 1rem;
+        border-radius: 1rem;
+        text-decoration: none;
+    }
+    #nosotros0 .aside1 a:hover{
+        color: rgb(255, 178, 164);
+        background-color: black;
+        font-weight: bold;
+    }
+    /*fin caja con texto*/
+
+    /*inicio caja con imagen*/
+    #nosotros0 .aside2{
+        grid-area: nosotros2;
+        width: auto;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    #nosotros0 .aside2 .carrusel1{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    #nosotros0 .aside2 .carrusel2{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    #nosotros0 .aside2 .carrusel3{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    #nosotros0 .aside2 .img{
+        width: 100%;
+        height: 100%;
+        border-radius: 2rem;
+    }
+    #nosotros0 .aside2 .img img{
+        width: 100%;
+        height: 100%;
+        transition: 700ms;
+        border-radius: 2rem;
+    }
+    #nosotros0 .aside2 .flecha{
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem;
+    }
+    #nosotros0 .aside2 .flecha a{
+        text-decoration: none;
+        font-size: 2vmax;
+        color: rgb(255, 178, 164);
+    }
+    .flecha a #izq{
+        text-shadow: 0.2rem 0.2rem 0.4rem black;
+        transition: 500ms;
+    }
+    .flecha a #izq:hover{
+        transform: scale(1.5);
+    }
+
+    .flecha a #der{
+        text-shadow: -0.2rem 0.2rem 0.4rem black;
+        transition: 500ms;
+    }
+    .flecha a #der:hover{
+        transform: scale(1.5);
+    }
+    /*fin caja con imagen*/
+    /*fin nosotros*/
+    /*FIN MAIN*/
+
+    /*INICIO FOOTER*/
+    .footer{
+        grid-area: footer;
+        width: 100%;
+        height: 10.5vh;
+        display: flex;
+    }
+
+    .footer .section1{
+        width: 75%;
+        height: auto;
+        background-color: black;
+        text-align: center;
+    }
+    .footer .section1 p{
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 1vmax;
+        margin-left: 19rem;
+        font-style: italic;
+        color: whitesmoke;
+        line-height: 10.5vh;
+    }
+
+    .footer .section2{
+        width: 25%;
+        height: auto;
+    }
+    .footer .section2 a{
+        width: 100%;
+        height: auto;
+        margin-left: 3rem;
+        margin-right: 0.5rem;
+        color: black;
+    }
+    .footer .section2 a img{
+        width: 50%;
+        height: auto;
+        transition: 500ms;
+    }
+    .footer .section2 a img:hover{
+        transform: translateX(-1rem);
+    }
+    /*FIN FOOTER*/
+}
+/*FIN MEDIA 1200px*/
